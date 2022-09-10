@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Muli", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+.main {
+  width: 90vw;
+  display: flex;
+}
+.box {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 50px;
+  height: 80vh;
+  color: #fff;
+  cursor: pointer;
+  flex: 0.5;
+  margin: 10px;
+  position: relative;
+  transition: flex 0.7s ease-in;
+}
+.box.active {
+  flex: 5;
+}
+.text {
+  opacity: 0;
+  font-size: 25px;
+  position: absolute;
+  left: 15px;
+  bottom: 20px;
+  font-weight: bold;
+}
+.box.active .text {
+  opacity: 1;
+  transition: opacity 0.3s ease-in 0.4s;
+}
